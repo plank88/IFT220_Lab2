@@ -19,7 +19,7 @@ New-ADOrganizationalUnit -Name ST_Privileged_Accounts -Path "DC=AD,DC=sparky-tec
 New-ADOrganizationalUnit -Name ST_Users -Path "DC=AD,DC=sparky-tech,DC=com" -Description "Non-Privileged Accounts"
 Write-Host -ForegroundColor yellow "Done creating OUs"
 Write-Host -ForegroundColor yellow ""
-
+ 
 Write-Host -ForegroundColor yellow "Creating groups based on department"
 New-ADGroup -GroupCategory Security -GroupScope Global -Name President -Path "OU=ST_Groups,DC=AD,DC=sparky-tech,DC=com"
 New-ADGroup -GroupCategory Security -GroupScope Global -Name Finance -Path "OU=ST_Groups,DC=AD,DC=sparky-tech,DC=com"
@@ -31,3 +31,4 @@ New-ADGroup -GroupCategory Security -GroupScope Global -Name IT -Path "OU=ST_Gro
 New-ADGroup -GroupCategory Security -GroupScope Global -Name Leadership -Path "OU=ST_Groups,DC=AD,DC=sparky-tech,DC=com"
 Write-Host -ForegroundColor yellow "Done creating groups"
 Write-Host -ForegroundColor yellow ""
+#Groups are finished

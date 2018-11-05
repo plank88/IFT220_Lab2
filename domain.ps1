@@ -1,6 +1,6 @@
 # Builds a new DC in a new Forest
 # Assumption: new machine uses DHCP
-
+# This is the first part
 # Change from DHCP to static IP using the same IP
 # Get the name of the network adapter
 $nicname = Get-NetAdapter  | select -ExpandProperty "name"
@@ -24,7 +24,7 @@ Write-Host -ForegroundColor yellow "Is that the correct timezone?"
 $Readhost = Read-Host -Prompt ("y | n ")
     Switch ($ReadHost) 
      { 
-       Y {Write-Host "Okay, moving on."}
+       Y {Write-Host "Okay, time to move on."}
        N {Write-Host -ForegroundColor yellow "Use the GUI to set the timezone. Press Enter when the timezone is set."; Read-Host}
        Default {Write-Host -ForegroundColor yellow "Use the GUI to set the timezone. Press Enter when the timezone is set."; Read-Host}
      }
